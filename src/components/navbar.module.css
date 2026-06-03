@@ -3,6 +3,11 @@
   gap: 1rem;
 }
 
-.tab {
+a {
   text-decoration: none;
+  color: blue;
+}
+
+a.active {
+  color: red;
 }
