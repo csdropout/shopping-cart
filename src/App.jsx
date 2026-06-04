@@ -1,12 +1,15 @@
 import "./App.css";
 import { Outlet } from "react-router";
 import Navbar from "./components/Navbar.jsx";
+import CartContextProvider from "./CartContext.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Outlet />
+      <CartContextProvider>
+        <Navbar />
+        <Outlet />
+      </CartContextProvider>
     </div>
   );
 }
