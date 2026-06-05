@@ -18,4 +18,8 @@
 
 .removeBtn {
   width: fit-content;
+  border: none;
+  background-color: transparent;
+  color: #006ed7;
+  cursor: pointer;
 }
