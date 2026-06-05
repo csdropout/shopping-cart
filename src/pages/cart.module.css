@@ -1,0 +1,9 @@
+.cartHeader {
+  text-align: start;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+}
