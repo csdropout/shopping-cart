@@ -6,13 +6,16 @@ function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    const itemInCart = cart.find((x) => x.id === item.id);
-    if (itemInCart) {
-      setCart([
-        ...cart,
-        { ...itemInCart, quantity: itemInCart.quantity + item.quantity },
-      ]);
-    } else setCart([...cart, item]);
+    const inCart = isItemInCart(item.id);
+    if (inCart) {
+      setCart((prev) =>
+        prev.map((x) =>
+          x.id === item.id ? { ...x, quantity: x.quantity + item.quantity } : x,
+        ),
+      );
+    } else {
+      setCart([...cart, item]);
+    }
   };
 
   const removeFromCart = (id) => {
@@ -48,6 +51,10 @@ function CartContextProvider({ children }) {
     return cart.some((item) => item.id === id);
   };
 
+  const getTotal = () => {
+    return cart.reduce((total, item) => total + item.quantity * item.price, 0);
+  };
+
   return (
     <CartContext
       value={{
@@ -57,6 +64,7 @@ function CartContextProvider({ children }) {
         increaseQty,
         decreaseQty,
         getCount,
+        getTotal,
       }}
     >
       {children}
