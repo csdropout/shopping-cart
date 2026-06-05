@@ -1,3 +1,14 @@
+.cartIcon {
+  display: block;
+  max-width: 80px;
+  margin: 0 auto;
+}
+
+.noItemText {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .cartHeader {
   text-align: start;
   margin-left: 1rem;
