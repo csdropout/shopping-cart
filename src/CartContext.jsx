@@ -36,6 +36,10 @@ function CartContextProvider({ children }) {
     return cart.reduce((count, item) => count + item.quantity, 0);
   };
 
+  const isItemInCart = (id) => {
+    return cart.some((item) => item.id === id);
+  };
+
   return (
     <CartContext
       value={{
