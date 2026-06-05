@@ -52,7 +52,9 @@ function CartContextProvider({ children }) {
   };
 
   const getTotal = () => {
-    return cart.reduce((total, item) => total + item.quantity * item.price, 0);
+    return cart
+      .reduce((total, item) => total + item.quantity * item.price, 0)
+      .toFixed(2);
   };
 
   return (

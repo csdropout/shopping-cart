@@ -19,7 +19,7 @@ function CartItemCard({ id, title, price, imageUrl, quantity }) {
       <img src={imageUrl} />
       <div className={styles.right}>
         <p>{title}</p>
-        <p>${price}</p>
+        <p>${price.toFixed(2)}</p>
         <QuantityPill
           quantity={quantity}
           onIncrease={onIncrease}
@@ -31,7 +31,7 @@ function CartItemCard({ id, title, price, imageUrl, quantity }) {
         >
           Remove
         </button>
-        <p>Subtotal: {quantity * price}</p>
+        <p>Subtotal: ${(quantity * price).toFixed(2)}</p>
       </div>
     </div>
   );
