@@ -1,0 +1,21 @@
+.pill {
+  display: flex;
+  width: 120px;
+  height: 3rem;
+  border-radius: 20px;
+  background-color: lightgray;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pill button {
+  border: none;
+  background-color: transparent;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.pill button:hover {
+  color: gray;
+}
