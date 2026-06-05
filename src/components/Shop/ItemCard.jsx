@@ -7,7 +7,7 @@ function ItemCard({ id, title, price, imageUrl }) {
   const cartContext = useContext(CartContext);
 
   function addToCart() {
-    cartContext.addToCart({ id, price, quantity });
+    cartContext.addToCart({ id, title, price, imageUrl, quantity });
   }
 
   return (
