@@ -42,5 +42,17 @@
 }
 
 .totalRow {
+  composes: summaryRow;
   margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .cartContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .orderSummary {
+    height: fit-content;
+  }
 }

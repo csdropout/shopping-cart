@@ -9,7 +9,7 @@ function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className={styles.emptyCartContainer}>
+      <div className="container">
         <h1 className={styles.cartHeader}>Shopping Cart</h1>
         <svg
           className={styles.cartIcon}
@@ -24,34 +24,36 @@ function Cart() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1 className={styles.cartHeader}>Shopping Cart</h1>
-      <div className={styles.itemsContainer}>
-        {cart.map((item) => (
-          <CartItemCard
-            id={item.id}
-            title={item.title}
-            price={item.price}
-            imageUrl={item.imageUrl}
-            quantity={item.quantity}
-          />
-        ))}
-      </div>
-      <div className={styles.orderSummary}>
-        <h2>Order Summary</h2>
-        <div className={styles.rowsContainer}>
-          <div className={styles.summaryRow}>
-            <span>Item(s) subtotal</span>
+      <div className={styles.cartContainer}>
+        <div className={styles.itemsContainer}>
+          {cart.map((item) => (
+            <CartItemCard
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              imageUrl={item.imageUrl}
+              quantity={item.quantity}
+            />
+          ))}
+        </div>
+        <div className={styles.orderSummary}>
+          <h2>Order Summary</h2>
+          <div className={styles.rowsContainer}>
+            <div className={styles.summaryRow}>
+              <span>Item(s) subtotal</span>
+              <span>${cartContext.getTotal()}</span>
+            </div>
+            <div className={styles.summaryRow}>
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+          </div>
+          <div className={styles.totalRow}>
+            <span>Order total</span>
             <span>${cartContext.getTotal()}</span>
           </div>
-          <div className={styles.summaryRow}>
-            <span>Shipping</span>
-            <span>Free</span>
-          </div>
-        </div>
-        <div className={`${styles.summaryRow} ${styles.totalRow}`}>
-          <span>Order total</span>
-          <span>${cartContext.getTotal()}</span>
         </div>
       </div>
     </div>

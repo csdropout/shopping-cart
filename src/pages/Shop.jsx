@@ -3,7 +3,7 @@ import ShopGrid from "../components/Shop/ShopGrid.jsx";
 
 function Shop() {
   return (
-    <div>
+    <div className="container">
       <h1>Products</h1>
       <ShopGrid />
     </div>
