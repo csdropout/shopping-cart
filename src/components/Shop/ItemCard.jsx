@@ -14,7 +14,7 @@ function ItemCard({ id, title, price, imageUrl }) {
     <div className={styles.card}>
       <img src={imageUrl} alt="Image" />
       <p>{title}</p>
-      <p className={styles.price}>${price}</p>
+      <p className={styles.price}>${price.toFixed(2)}</p>
       <div className={styles.inputSection}>
         <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>
           -
