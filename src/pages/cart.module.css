@@ -7,3 +7,28 @@
   flex-direction: column;
   padding-inline: 1rem;
 }
+
+.orderSummary {
+  background-color: #e6e6e6;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 16px;
+}
+
+.rowsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  padding: 0.5rem 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalRow {
+  margin-top: 0.5rem;
+}
