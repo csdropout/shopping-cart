@@ -11,11 +11,11 @@ function ItemCard({ id, title, price, imageUrl }) {
   }
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       <img src={imageUrl} alt="Image" />
       <p>{title}</p>
-      <p>{price}</p>
-      <div>
+      <p className={styles.price}>${price}</p>
+      <div className={styles.inputSection}>
         <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>
           -
         </button>
