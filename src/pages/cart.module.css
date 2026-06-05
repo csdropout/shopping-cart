@@ -1,5 +1,6 @@
 .cartHeader {
   text-align: start;
+  margin-left: 1rem;
 }
 
 .itemsContainer {
@@ -10,7 +11,7 @@
 
 .orderSummary {
   background-color: #e6e6e6;
-  padding: 1.5rem;
+  padding: 1.25rem 1rem;
   margin: 1rem;
   border-radius: 16px;
 }
