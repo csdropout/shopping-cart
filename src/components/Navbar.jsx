@@ -24,7 +24,7 @@ function Navbar() {
         className={({ isActive }) => (isActive ? `${styles.active}` : "")}
         to="cart"
       >
-        Cart <span>{cartProvider.getCount()}</span>
+        Cart <div className={styles.cartCount}>{cartProvider.getCount()}</div>
       </NavLink>
     </div>
   );
