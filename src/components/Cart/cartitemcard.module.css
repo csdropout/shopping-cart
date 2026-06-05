@@ -1,0 +1,21 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  border-bottom: 1px solid grey;
+  padding: 1rem 0;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.removeBtn {
+  width: fit-content;
+}
