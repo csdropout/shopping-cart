@@ -1,5 +1,5 @@
 .card {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
   border-bottom: 1px solid grey;
@@ -7,7 +7,8 @@
 }
 
 .card img {
-  max-width: 100%;
+  max-width: 100px;
+  object-fit: contain;
 }
 
 .right {
@@ -22,4 +23,10 @@
   background-color: transparent;
   color: #006ed7;
   cursor: pointer;
+}
+
+@media (min-width: 500px) {
+  .card img {
+    max-width: 150px;
+  }
 }
