@@ -10,7 +10,6 @@ function Cart() {
   if (cart.length === 0) {
     return (
       <div className="container">
-        <h1 className={styles.cartHeader}>Shopping Cart</h1>
         <svg
           className={styles.cartIcon}
           xmlns="http://www.w3.org/2000/svg"
