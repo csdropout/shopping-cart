@@ -1,0 +1,12 @@
+footer {
+  border-top: 1px solid black;
+}
+
+.footerContent {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  max-width: 1200px;
+}
