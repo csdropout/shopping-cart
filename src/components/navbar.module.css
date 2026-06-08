@@ -6,13 +6,19 @@
   border-bottom: 1px solid black;
 }
 
-a {
-  text-decoration: none;
-  color: blue;
+.tabs {
   font-size: 1.2rem;
 }
 
-a.active {
+.inactive {
+  composes: tabs;
+  text-decoration: none;
+  color: blue;
+}
+
+.active {
+  composes: tabs;
+  text-decoration: underline;
   color: red;
 }
 

@@ -9,19 +9,25 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <NavLink
-        className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        className={({ isActive }) =>
+          isActive ? styles.active : styles.inactive
+        }
         to="home"
       >
         Home
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        className={({ isActive }) =>
+          isActive ? styles.active : styles.inactive
+        }
         to="shop"
       >
         Shop
       </NavLink>
       <NavLink
-        className={({ isActive }) => (isActive ? `${styles.active}` : "")}
+        className={({ isActive }) =>
+          isActive ? styles.active : styles.inactive
+        }
         to="cart"
       >
         Cart <div className={styles.cartCount}>{cartProvider.getCount()}</div>
